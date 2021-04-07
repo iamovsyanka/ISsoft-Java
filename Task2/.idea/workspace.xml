@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4060840-833d-4804-9e62-02cec53a505c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="task2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qnVwQPofajxtoo5oCQIVin1teI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.ovsyanka.logger" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ISsoft\Task2\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.OrderServiceTest">
+    <configuration name="OrderItemStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.ovsyanka.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.ovsyanka.persistence" />
+      <option name="MAIN_CLASS_NAME" value="by.ovsyanka.persistence.OrderItemStorageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.ovsyanka.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.ovsyanka.service" />
+      <option name="MAIN_CLASS_NAME" value="by.ovsyanka.service.OrderServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.testLoadAllByInvalidUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.ovsyanka.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.ovsyanka.service" />
+      <option name="MAIN_CLASS_NAME" value="by.ovsyanka.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="testLoadAllByInvalidUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.testLoadAllByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.ovsyanka.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.ovsyanka.service" />
+      <option name="MAIN_CLASS_NAME" value="by.ovsyanka.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="testLoadAllByUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.testPlaceOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.ovsyanka.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.ovsyanka.service" />
+      <option name="MAIN_CLASS_NAME" value="by.ovsyanka.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="testPlaceOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OrderServiceTest" />
+        <item itemvalue="JUnit.OrderServiceTest.testLoadAllByUserId" />
+        <item itemvalue="JUnit.OrderServiceTest.testLoadAllByInvalidUserId" />
+        <item itemvalue="JUnit.OrderServiceTest.testPlaceOrder" />
+        <item itemvalue="JUnit.OrderItemStorageTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4060840-833d-4804-9e62-02cec53a505c" name="Default Changelist" comment="" />
+      <created>1617715578760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617715578760</updated>
+      <workItem from="1617715580366" duration="5319000" />
+      <workItem from="1617784188510" duration="449000" />
+      <workItem from="1617798745336" duration="13063000" />
+      <workItem from="1617812292856" duration="474000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" width="892" height="683" key="#Project_Structure" timestamp="1617715602730">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" width="892" height="683" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1617715602730" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1617801344650">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617801344650" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1617811103573">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1617811103573" />
+    <state x="325" y="6" key="CommitChangelistDialog2" timestamp="1617812424934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="325" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1617812424934" />
+    <state width="1495" height="262" key="GridCell.Tab.0.bottom" timestamp="1617812251519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617812251519" />
+    <state width="1495" height="262" key="GridCell.Tab.0.center" timestamp="1617812251519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617812251519" />
+    <state width="1495" height="262" key="GridCell.Tab.0.left" timestamp="1617812251518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617812251518" />
+    <state width="1495" height="262" key="GridCell.Tab.0.right" timestamp="1617812251519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617812251519" />
+    <state width="1495" height="262" key="GridCell.Tab.1.bottom" timestamp="1617812251520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617812251520" />
+    <state width="1495" height="262" key="GridCell.Tab.1.center" timestamp="1617812251519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617812251519" />
+    <state width="1495" height="262" key="GridCell.Tab.1.left" timestamp="1617812251519">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617812251519" />
+    <state width="1495" height="262" key="GridCell.Tab.1.right" timestamp="1617812251520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1495" height="262" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617812251520" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1617806157823">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1617806157823" />
+    <state x="300" y="55" key="SettingsEditor" timestamp="1617802708755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="300" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1617802708755" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1617812761350">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1617812761350" />
+    <state x="418" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1617812331358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="418" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1617812331358" />
+  </component>
+</project>
