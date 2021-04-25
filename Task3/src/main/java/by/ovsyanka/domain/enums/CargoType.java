@@ -1,4 +1,5 @@
 package by.ovsyanka.domain.enums;
 
-public class CargoType {
+public enum CargoType {
+    BULK_CARRIERS, BULK_CONTAINERS, WILDLIFE
 }

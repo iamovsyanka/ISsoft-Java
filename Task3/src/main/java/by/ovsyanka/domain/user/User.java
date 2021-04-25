@@ -10,14 +10,13 @@ import java.util.UUID;
 import static com.google.common.base.Preconditions.checkArgument;
 
 @Getter
+@Setter
 public abstract class User {
 
     private final UUID id;
-    @Setter
     private String firstName;
-    @Setter
     private String lastName;
-    private LocalDate birthday;
+    private final LocalDate birthday;
 
     protected User(String firstName, String lastName, LocalDate birthday) {
         checkArgument(birthday.getYear() <= LocalDate.now().getYear(), "Age must be positive");
