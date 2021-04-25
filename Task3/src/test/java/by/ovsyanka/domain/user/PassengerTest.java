@@ -1,8 +1,12 @@
 package by.ovsyanka.domain.user;
 
+import by.ovsyanka.domain.enums.TicketType;
+import by.ovsyanka.domain.ticket.Ticket;
+import by.ovsyanka.domain.train.PassengerCarriage;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -71,5 +75,39 @@ public class PassengerTest {
         LocalDate invalidBirthday = LocalDate.of(1000, 2, 17);
 
         assertThrows(IllegalArgumentException.class, () -> Passenger.of("Anya", "Ovsyanka", invalidBirthday));
+    }
+
+    @Test
+    public void testGetAdultTicket() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+        Ticket ticket = Ticket.of(10, UUID.randomUUID());
+        passenger.buyTicket(ticket);
+
+        assertEquals(TicketType.ADULT, passenger.getTicket().getTicketType());
+    }
+
+    @Test
+    public void testGetChildTicket() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2015, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+        Ticket ticket = Ticket.of(10, UUID.randomUUID());
+        passenger.buyTicket(ticket);
+
+        assertEquals(TicketType.CHILDLIKE, passenger.getTicket().getTicketType());
+    }
+
+    @Test
+    public void testRemoveTicket() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2015, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+        Ticket ticket = Ticket.of(10, UUID.randomUUID());
+        passenger.buyTicket(ticket);
+
+        assertEquals(TicketType.CHILDLIKE, passenger.getTicket().getTicketType());
+
+        passenger.removeTicket();
+
+        assertNull(passenger.getTicket());
     }
 }

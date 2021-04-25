@@ -3,14 +3,10 @@ package by.ovsyanka.domain.user;
 import by.ovsyanka.domain.enums.TicketType;
 import by.ovsyanka.domain.ticket.Ticket;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDate;
 
-import static com.google.common.base.Preconditions.checkArgument;
-
 @Getter
-@Setter
 public class Passenger extends User {
 
     private Ticket ticket;
@@ -33,5 +29,9 @@ public class Passenger extends User {
         }
 
         return this.getTicket();
+    }
+
+    public void removeTicket() {
+        ticket = null;
     }
 }

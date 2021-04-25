@@ -33,7 +33,7 @@ public class PassengerCarriageTest {
         Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
         PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
         Ticket ticket = Ticket.of(10, passengerCarriage.getId());
-        passenger.setTicket(ticket);
+        passenger.buyTicket(ticket);
 
         assertEquals(ticket, passenger.getTicket());
 
@@ -47,10 +47,55 @@ public class PassengerCarriageTest {
         Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
         PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
         Ticket ticket = Ticket.of(10, UUID.randomUUID());
-        passenger.setTicket(ticket);
+        passenger.buyTicket(ticket);
 
         assertEquals(ticket, passenger.getTicket());
 
         assertThrows(IllegalArgumentException.class, () -> passengerCarriage.addPassenger(passenger));
+    }
+
+    @Test
+    public void testAddHarePassenger() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+
+        assertThrows(NullPointerException.class, () -> passengerCarriage.addPassenger(passenger));
+    }
+
+    @Test
+    public void testRemovePassenger() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+        Ticket ticket = Ticket.of(10, passengerCarriage.getId());
+        passenger.buyTicket(ticket);
+
+        assertEquals(ticket, passenger.getTicket());
+
+        passengerCarriage.addPassenger(passenger);
+
+        assertEquals(false, passengerCarriage.getPlaces().get(ticket.getPlace()));
+
+        passengerCarriage.removePassenger(passenger);
+        passenger.removeTicket();
+
+        assertEquals(true, passengerCarriage.getPlaces().get(ticket.getPlace()));
+    }
+
+    @Test
+    public void testRemoveInvalidPassenger() {
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
+        Ticket ticket = Ticket.of(10, passengerCarriage.getId());
+        passenger.buyTicket(ticket);
+
+        assertEquals(ticket, passenger.getTicket());
+
+        passengerCarriage.addPassenger(passenger);
+
+        assertEquals(false, passengerCarriage.getPlaces().get(ticket.getPlace()));
+
+        passenger.removeTicket();
+
+        assertThrows(NullPointerException.class, () -> passengerCarriage.removePassenger(passenger));
     }
 }

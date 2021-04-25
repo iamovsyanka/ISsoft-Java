@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 @Getter
 public class PassengerCarriage extends Carriage {
@@ -27,11 +28,22 @@ public class PassengerCarriage extends Carriage {
     }
 
     public void addPassenger(Passenger passenger) {
+        checkNotNull(passenger.getTicket(), "The hare!");
         checkArgument(passenger.getTicket().getPassengerCarriageId().equals(this.getId()),
                 "The ticket is not for this carriage");
         checkArgument(passenger.getTicket().getPlace() < this.getMaxCountPlace(),
                 "There is no place with this number in this carriage");
 
         places.put(passenger.getTicket().getPlace(), false);
+    }
+
+    public void removePassenger(Passenger passenger) {
+        checkNotNull(passenger.getTicket(), "The hare!");
+        checkArgument(passenger.getTicket().getPassengerCarriageId().equals(this.getId()),
+                "The ticket is not for this carriage");
+        checkArgument(passenger.getTicket().getPlace() < this.getMaxCountPlace(),
+                "There is no place with this number in this carriage");
+
+        places.put(passenger.getTicket().getPlace(), true);
     }
 }
