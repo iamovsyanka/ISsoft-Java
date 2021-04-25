@@ -84,4 +84,52 @@ public class TrainTest {
 
         assertThrows(IllegalArgumentException.class, () -> train.addCarriage(locomotive1));
     }
+
+    @Test
+    public void testGetValidCarriageByIndex() {
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
+        Locomotive locomotive = Locomotive.of(trainDriver);
+
+        assertNotNull(locomotive);
+
+        Train train = Train.of(8, locomotive);
+        CargoCarriage cargoCarriage = CargoCarriage.of(20000);
+        train.addCarriage(cargoCarriage);
+
+        assertEquals(cargoCarriage, train.getCarriageByIndex(2));
+    }
+
+    @Test
+    public void testGetInvalidCarriageByIndex() {
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
+        Locomotive locomotive = Locomotive.of(trainDriver);
+
+        assertNotNull(locomotive);
+
+        Train train = Train.of(8, locomotive);
+        CargoCarriage cargoCarriage = CargoCarriage.of(20000);
+        train.addCarriage(cargoCarriage);
+
+        assertNotEquals(cargoCarriage, train.getCarriageByIndex(1));
+    }
+
+    @Test
+    public void testGetNullByIndex() {
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
+        Locomotive locomotive = Locomotive.of(trainDriver);
+
+        assertNotNull(locomotive);
+
+        Train train = Train.of(8, locomotive);
+        CargoCarriage cargoCarriage = CargoCarriage.of(20000);
+        train.addCarriage(cargoCarriage);
+
+        assertThrows(IllegalArgumentException.class, () -> train.getCarriageByIndex(4));
+    }
 }

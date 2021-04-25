@@ -51,6 +51,18 @@ public class Train {
         log.info("add carriage {}, currentTrainLength ", carriage.toString(), currentTrainLength);
     }
 
+    public Carriage getCarriageByIndex(int index) {
+        checkArgument(index > 0, "Index must be > 0");
+        checkArgument(index <= currentTrainLength, "There is no such carriage");
+
+        Node node = locomotiveCarriage;
+        for (int i = 1; i < index; i++) {
+            node = node.getNextNode();
+        }
+
+        return node.getCurrentNode();
+    }
+
     private class Node {
         private Carriage currentNode;
         private Node nextNode;
