@@ -73,36 +73,4 @@ public class CargoTest {
 
         assertEquals(comment, cargo.getComment());
     }
-
-    @Test
-    public void testEqualsSuccess() {
-        Cargo cargo1 = Cargo.of("Seed", 2500, CargoType.BULK_CARRIERS);
-        Cargo cargo2 = Cargo.of("Seed", 2500, CargoType.BULK_CARRIERS);
-
-        assertEquals(true, cargo1.equals(cargo2));
-    }
-
-    @Test
-    public void testNotEqualsCargoType() {
-        Cargo cargo1 = Cargo.of("Seed", 2500, CargoType.BULK_CARRIERS);
-        Cargo cargo2 = Cargo.of("Seed", 2500, CargoType.BULK_CONTAINERS);
-
-        assertEquals(false, cargo1.equals(cargo2));
-    }
-
-    @Test
-    public void testNotEqualsWeight() {
-        Cargo cargo1 = Cargo.of("Seed", 2501, CargoType.BULK_CARRIERS);
-        Cargo cargo2 = Cargo.of("Seed", 2500, CargoType.BULK_CARRIERS);
-
-        assertEquals(false, cargo1.equals(cargo2));
-    }
-
-    @Test
-    public void testNotEqualsName() {
-        Cargo cargo1 = Cargo.of("Seed", 2500, CargoType.BULK_CARRIERS);
-        Cargo cargo2 = Cargo.of("Seed1", 2500, CargoType.BULK_CARRIERS);
-
-        assertEquals(false, cargo1.equals(cargo2));
-    }
 }

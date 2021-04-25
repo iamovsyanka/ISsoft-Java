@@ -2,12 +2,14 @@ package by.ovsyanka.domain.train;
 
 import by.ovsyanka.domain.cargo.Cargo;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
+@Slf4j
 @Getter
 public class CargoCarriage extends Carriage {
 
@@ -19,6 +21,8 @@ public class CargoCarriage extends Carriage {
 
         this.maxCapacity = maxCapacity;
         this.cargos = new ArrayList<>();
+
+        log.info("CargoCarriage {} created", toString());
     }
 
     public static CargoCarriage of(int maxCapacity) {
@@ -29,12 +33,14 @@ public class CargoCarriage extends Carriage {
         checkArgument(maxCapacity - getCurrentCapacity() > cargo.getWeight(), "Cargo weight is too big");
 
         cargos.add(cargo);
+        log.info("add cargo {}", cargo.toString());
     }
 
     public void removeCargo(Cargo cargo) throws Exception {
         int removeCargoIndex = cargos.indexOf(cargo);
         if (removeCargoIndex != -1) {
             cargos.remove(removeCargoIndex);
+            log.info("remove cargo {}", cargo.toString());
         } else {
             throw new Exception("Cargo not found");
         }
@@ -42,5 +48,13 @@ public class CargoCarriage extends Carriage {
 
     public int getCurrentCapacity() {
         return cargos.stream().mapToInt(cargo -> (int) cargo.getWeight()).sum();
+    }
+
+    @Override
+    public String toString() {
+        return "CargoCarriage{" +
+                "maxCapacity=" + maxCapacity +
+                ", cargos=" + cargos +
+                '}';
     }
 }

@@ -14,7 +14,8 @@ public class PassengerTest {
 
     @Test
     public void testCreatePassenger() {
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17));
 
         assertNotNull(passenger);
     }
@@ -34,7 +35,8 @@ public class PassengerTest {
     @Test
     public void testSetFirstName() {
         String newFirstName = "Anya";
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17));
         passenger.setFirstName(newFirstName);
 
         assertEquals(newFirstName, passenger.getFirstName());
@@ -43,7 +45,8 @@ public class PassengerTest {
     @Test
     public void testSetLastName() {
         String newLastName = "Anya";
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17));
         passenger.setLastName(newLastName);
 
         assertEquals(newLastName, passenger.getLastName());
@@ -51,7 +54,8 @@ public class PassengerTest {
 
     @Test
     public void testCalculateAge() {
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17));
 
         assertEquals(20, User.calculateAge(passenger.getBirthday(), LocalDate.now()));
     }
@@ -79,7 +83,8 @@ public class PassengerTest {
 
     @Test
     public void testGetAdultTicket() {
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17));
         PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
         Ticket ticket = Ticket.of(10, UUID.randomUUID());
         passenger.buyTicket(ticket);
@@ -89,7 +94,8 @@ public class PassengerTest {
 
     @Test
     public void testGetChildTicket() {
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2015, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2015, 2, 17));
         PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
         Ticket ticket = Ticket.of(10, UUID.randomUUID());
         passenger.buyTicket(ticket);
@@ -99,7 +105,8 @@ public class PassengerTest {
 
     @Test
     public void testRemoveTicket() {
-        Passenger passenger = Passenger.of("Anna", "Ovsyanka", LocalDate.of(2015, 2, 17));
+        Passenger passenger = Passenger.of("Anna", "Ovsyanka",
+                LocalDate.of(2015, 2, 17));
         PassengerCarriage passengerCarriage = PassengerCarriage.of(20);
         Ticket ticket = Ticket.of(10, UUID.randomUUID());
         passenger.buyTicket(ticket);

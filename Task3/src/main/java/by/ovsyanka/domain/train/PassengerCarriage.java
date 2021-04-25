@@ -2,6 +2,7 @@ package by.ovsyanka.domain.train;
 
 import by.ovsyanka.domain.user.Passenger;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.Map;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+@Slf4j
 @Getter
 public class PassengerCarriage extends Carriage {
 
@@ -21,6 +23,8 @@ public class PassengerCarriage extends Carriage {
         this.maxCountPlace = maxCountPlace;
         places = new HashMap<>();
         for (int i = 1; i <= maxCountPlace; i++) places.put(i, true);
+
+        log.info("PassengerCarriage {} created", toString());
     }
 
     public static PassengerCarriage of(int maxCountPlace) {
@@ -35,6 +39,8 @@ public class PassengerCarriage extends Carriage {
                 "There is no place with this number in this carriage");
 
         places.put(passenger.getTicket().getPlace(), false);
+
+        log.info("add passenger {}", passenger.toString());
     }
 
     public void removePassenger(Passenger passenger) {
@@ -45,5 +51,15 @@ public class PassengerCarriage extends Carriage {
                 "There is no place with this number in this carriage");
 
         places.put(passenger.getTicket().getPlace(), true);
+
+        log.info("remove passenger {}", passenger.toString());
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerCarriage{" +
+                "maxCountPlace=" + maxCountPlace +
+                ", places=" + places +
+                '}';
     }
 }

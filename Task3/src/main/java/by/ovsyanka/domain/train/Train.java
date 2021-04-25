@@ -1,8 +1,13 @@
 package by.ovsyanka.domain.train;
 
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
+
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
+@Slf4j
+@Getter
 public class Train {
 
     private final int maxTrainLength;
@@ -18,6 +23,8 @@ public class Train {
         this.lastCarriage = new Node(null, null, locomotiveCarriage);
         this.locomotiveCarriage = new Node(locomotive, lastCarriage, null);
         currentTrainLength++;
+
+        log.info("Train {} created", toString());
     }
 
     public static Train of(int maxTrainLength, Locomotive locomotive) {
@@ -40,6 +47,8 @@ public class Train {
         previous.setNextNode(lastCarriage);
 
         currentTrainLength++;
+
+        log.info("add carriage {}, currentTrainLength ", carriage.toString(), currentTrainLength);
     }
 
     private class Node {
@@ -76,5 +85,15 @@ public class Train {
         public void setPrevNode(Node prevNode) {
             this.prevNode = prevNode;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Train{" +
+                "maxTrainLength=" + maxTrainLength +
+                ", currentTrainLength=" + currentTrainLength +
+                ", locomotiveCarriage=" + locomotiveCarriage +
+                ", lastCarriage=" + lastCarriage +
+                '}';
     }
 }

@@ -1,7 +1,6 @@
 package by.ovsyanka.domain.user;
 
 import by.ovsyanka.domain.enums.LicenseType;
-import by.ovsyanka.domain.license.License;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

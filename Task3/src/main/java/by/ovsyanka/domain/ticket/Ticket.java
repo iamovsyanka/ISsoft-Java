@@ -3,11 +3,13 @@ package by.ovsyanka.domain.ticket;
 import by.ovsyanka.domain.enums.TicketType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.UUID;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
+@Slf4j
 @Getter
 public class Ticket {
 
@@ -23,9 +25,21 @@ public class Ticket {
         this.place = place;
         this.passengerCarriageId = passengerCarriageId;
         this.id = UUID.randomUUID();
+
+        log.info("Ticket {} created", toString());
     }
 
     public static Ticket of(int place, UUID passengerCarriageId) {
         return new Ticket(place, passengerCarriageId);
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", place=" + place +
+                ", passengerCarriageId=" + passengerCarriageId +
+                ", ticketType=" + ticketType +
+                '}';
     }
 }

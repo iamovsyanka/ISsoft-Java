@@ -3,12 +3,14 @@ package by.ovsyanka.domain.cargo;
 import by.ovsyanka.domain.enums.CargoType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
 import java.util.Objects;
 import java.util.UUID;
 
+@Slf4j
 @Getter
 public class Cargo {
 
@@ -26,6 +28,8 @@ public class Cargo {
         this.name = name;
         this.weight = weight;
         this.cargoType = cargoType;
+
+        log.info("Cargo {} created", toString());
     }
 
     public static Cargo of(String name, double weight, CargoType cargoType) {
@@ -39,19 +43,12 @@ public class Cargo {
 
     @Override
     public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Cargo cargo = (Cargo) obj;
-        return Objects.equals(weight, cargo.weight) && cargoType == cargo.cargoType && name.equals(cargo.name);
+        return "Cargo{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", cargoType=" + cargoType +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

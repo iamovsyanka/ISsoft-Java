@@ -3,9 +3,11 @@ package by.ovsyanka.domain.license;
 import by.ovsyanka.domain.enums.LicenseType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 
+@Slf4j
 @Getter
 public class License {
 
@@ -20,6 +22,8 @@ public class License {
         } else {
             licenseType = LicenseType.INVALID;
         }
+
+        log.info("License {} created", toString());
     }
 
     public static License of(LocalDate validUntil) {
@@ -33,6 +37,15 @@ public class License {
             licenseType = LicenseType.INVALID;
         }
 
+        log.info("License type is {}", licenseType);
         return licenseType;
+    }
+
+    @Override
+    public String toString() {
+        return "License{" +
+                "licenseType=" + licenseType +
+                ", validUntil=" + validUntil +
+                '}';
     }
 }
