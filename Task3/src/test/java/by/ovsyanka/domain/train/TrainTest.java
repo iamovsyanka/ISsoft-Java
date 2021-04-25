@@ -11,7 +11,9 @@ public class TrainTest {
 
     @Test
     public void testCreateTrain() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertNotNull(locomotive);
@@ -21,10 +23,11 @@ public class TrainTest {
         assertNotNull(train);
     }
 
-
     @Test
     public void testInvalidMaxTrainLength() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertNotNull(locomotive);
@@ -39,7 +42,9 @@ public class TrainTest {
 
     @Test
     public void testGetCurrentTrainLength() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertNotNull(locomotive);
@@ -51,7 +56,9 @@ public class TrainTest {
 
     @Test
     public void testAddCarriage() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertNotNull(locomotive);
@@ -65,7 +72,9 @@ public class TrainTest {
 
     @Test
     public void testAddLocomotive() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
         Locomotive locomotive1 = Locomotive.of(trainDriver);
 

@@ -11,7 +11,9 @@ public class LocomotiveTest {
 
     @Test
     public void testCreateLocomotive() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertNotNull(locomotive);
@@ -26,7 +28,9 @@ public class LocomotiveTest {
 
     @Test
     public void testSetNullTrainDriver() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertThrows(NullPointerException.class, () -> locomotive.setTrainDriver(null));
@@ -34,8 +38,12 @@ public class LocomotiveTest {
 
     @Test
     public void testSetTrainDriver() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
-        TrainDriver trainDriver1 = TrainDriver.of("Ovsyanka", "Ovsyanka", LocalDate.of(2000, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
+        TrainDriver trainDriver1 = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertDoesNotThrow(() -> locomotive.setTrainDriver(trainDriver1));
@@ -43,7 +51,9 @@ public class LocomotiveTest {
 
     @Test
     public void testGetTrainDriver() {
-        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka", LocalDate.of(2001, 2, 17));
+        TrainDriver trainDriver = TrainDriver.of("Anna", "Ovsyanka",
+                LocalDate.of(2001, 2, 17),
+                LocalDate.of(2022, 12, 12));
         Locomotive locomotive = Locomotive.of(trainDriver);
 
         assertEquals(trainDriver, locomotive.getTrainDriver());
