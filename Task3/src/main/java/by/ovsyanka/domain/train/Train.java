@@ -1,6 +1,7 @@
 package by.ovsyanka.domain.train;
 
 import lombok.Getter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import static com.google.common.base.Preconditions.checkArgument;
@@ -8,6 +9,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 @Slf4j
 @Getter
+@ToString
 public class Train {
 
     private final int maxTrainLength;
@@ -48,7 +50,7 @@ public class Train {
 
         currentTrainLength++;
 
-        log.info("add carriage {}, currentTrainLength ", carriage.toString(), currentTrainLength);
+        log.info("add carriage {}, currentTrainLength {}", carriage, currentTrainLength);
     }
 
     public Carriage getCarriageByIndex(int index) {
@@ -62,6 +64,8 @@ public class Train {
 
         return node.getCurrentNode();
     }
+
+    //TODO: remove by index, remove last, update locomotive
 
     private class Node {
         private Carriage currentNode;
@@ -97,15 +101,5 @@ public class Train {
         public void setPrevNode(Node prevNode) {
             this.prevNode = prevNode;
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Train{" +
-                "maxTrainLength=" + maxTrainLength +
-                ", currentTrainLength=" + currentTrainLength +
-                ", locomotiveCarriage=" + locomotiveCarriage +
-                ", lastCarriage=" + lastCarriage +
-                '}';
     }
 }

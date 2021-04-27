@@ -2,6 +2,7 @@ package by.ovsyanka.domain.train;
 
 import by.ovsyanka.domain.user.Passenger;
 import lombok.Getter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -12,6 +13,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 @Slf4j
 @Getter
+@ToString
 public class PassengerCarriage extends Carriage {
 
     private final int maxCountPlace;
@@ -40,7 +42,7 @@ public class PassengerCarriage extends Carriage {
 
         places.put(passenger.getTicket().getPlace(), false);
 
-        log.info("add passenger {}", passenger.toString());
+        log.info("add passenger {}", passenger);
     }
 
     public void removePassenger(Passenger passenger) {
@@ -52,14 +54,6 @@ public class PassengerCarriage extends Carriage {
 
         places.put(passenger.getTicket().getPlace(), true);
 
-        log.info("remove passenger {}", passenger.toString());
-    }
-
-    @Override
-    public String toString() {
-        return "PassengerCarriage{" +
-                "maxCountPlace=" + maxCountPlace +
-                ", places=" + places +
-                '}';
+        log.info("remove passenger {}", passenger);
     }
 }

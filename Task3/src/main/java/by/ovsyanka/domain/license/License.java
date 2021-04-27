@@ -3,12 +3,14 @@ package by.ovsyanka.domain.license;
 import by.ovsyanka.domain.enums.LicenseType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 
 @Slf4j
 @Getter
+@ToString
 public class License {
 
     private LicenseType licenseType;
@@ -38,14 +40,7 @@ public class License {
         }
 
         log.info("License type is {}", licenseType);
-        return licenseType;
-    }
 
-    @Override
-    public String toString() {
-        return "License{" +
-                "licenseType=" + licenseType +
-                ", validUntil=" + validUntil +
-                '}';
+        return licenseType;
     }
 }

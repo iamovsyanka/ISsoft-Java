@@ -3,15 +3,16 @@ package by.ovsyanka.domain.cargo;
 import by.ovsyanka.domain.enums.CargoType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.UUID;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-import java.util.Objects;
-import java.util.UUID;
-
 @Slf4j
 @Getter
+@ToString
 public class Cargo {
 
     private final UUID id;
@@ -39,16 +40,5 @@ public class Cargo {
     public void setWeight(double weight) {
         checkArgument(weight > 0, "Weight cannot be less than one");
         this.weight = weight;
-    }
-
-    @Override
-    public String toString() {
-        return "Cargo{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                ", cargoType=" + cargoType +
-                ", comment='" + comment + '\'' +
-                '}';
     }
 }
